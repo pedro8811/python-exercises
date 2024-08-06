@@ -19,12 +19,19 @@ while option == 's':
     option = str(input("Deseja adicionar mais um jogador? [s/n] ")).strip().lower()
 
 print()
-
-print("=-"*20)
-print('cod  nome             gols         total')
 print('-'*40)
-cod = 0
+cod = 1
 for x in jogadores:
     print(f'{cod}  {x["nome"]}             {x["golsporpartida"]}         {x["totalgols"]}')
     cod += 1
-print("-=" * 20)
+print("=" * 40)
+
+jogadoroption = int()
+while jogadoroption != 999:
+    for i, x in enumerate(jogadores):
+        if i == jogadoroption - 1:
+            print(f' -- LEVANTAMENTO DO JOGADOR {x["nome"]}')
+            for pos, x in enumerate(x["golsporpartida"]):
+                print(f'     => {pos+1}° partida fez {x} gols')
+    jogadoroption = int(input("Mostrar dados de qual jogador? (999 para parar) "))
+    print('-'*40)

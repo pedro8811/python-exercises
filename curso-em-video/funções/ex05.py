@@ -4,7 +4,7 @@ numeros = []
 def sorteia():
     print('SORTEANDO OS VALORES DA LISTA: ', end="")
     for x in range(0, 5):
-        num = randint(0, 100)
+        num = randint(0, 10)
         print(num, end=" ")
         sleep(.5)
         numeros.append(num)

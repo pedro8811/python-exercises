@@ -10,15 +10,15 @@ def contador(i, f, p):
     if i < f:
         while s <= f:
             print(s, end=" ")
-            sleep(.1)
+            sleep(1)
             s += p
-        print("FIM")
+        print("FIM!")
     elif i > f:
         while s >= f:
             print(s, end=" ")
-            sleep(.1)
+            sleep(1)
             s -= p
-        print("FIM")
+        print("FIM!")
 
 
 contador(1, 10, 1)
